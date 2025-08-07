@@ -1,0 +1,53 @@
+version: "3"
+services:
+  nginx:
+    image: nginx:1.20
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "8900:80"
+    volumes:
+      - ./:/app
+      - ./docker-conf/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    links:
+      - php
+    networks:
+      - default
+
+  php:
+    build:
+      context: ./docker-conf/php
+    volumes:
+      - ./:/app
+      - ./docker-conf/php/www.conf:/usr/local/etc/php-fpm.d/www.conf:rw
+      - ./docker-conf/php/php.ini:/usr/local/etc/php/php.ini:rw
+      - ./docker-conf/php/openssl.cnf:/etc/ssl/openssl.cnf:rw
+    env_file:
+      - "./.env"
+    user: "1000:0"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200k"
+        max-file: "3"
+    extra_hosts:
+      - "host.docker-conf.internal:host-gateway"
+    working_dir: /app
+    depends_on:
+      - mysql
+    networks:
+      - default
+
+  mysql:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE:-radmin}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-1234}
+    ports:
+      - 3390:${DB_PORT:-3306}
+    volumes:
+      - ./docker-conf/database:/var/lib/mysql
+    networks:
+      - default

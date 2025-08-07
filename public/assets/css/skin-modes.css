@@ -1,0 +1,168 @@
+/*--- Default-header ---*/
+.default-header .header-search{
+	background:none;
+	position:inherit;
+}
+.default-header .header-white{
+	display:none;
+}
+.default-header .header-search .header-icons .header-icons-link li a{
+	background: rgba(0,0,0,0.2);
+	border:0;
+}
+.default-header .top-bar{
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.1);
+}
+.default-header .top-bar-right span {
+    color:#fff;
+}
+.default-header .top-bar-left span {
+    color: #fff;
+}
+.default-header .top-bar .contact i, .default-header .top-bar .contact i.text-white {
+    color: #fff !important;
+}
+.default-header .top-bar-left .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: #fff transparent transparent transparent;
+}
+
+
+/*--- Header-Style1 ---*/
+.headerstyle1 .header-search{
+	background:#fff;
+	position:relative;
+}
+.headerstyle1 .header-brand-img{
+	display:none;
+}
+.headerstyle1 .header-white{
+	display:block;
+}
+.headerstyle1 .header-search .header-icons .header-icons-link li a{
+	background: transparent;
+	border:1px solid #d3d9e0;
+}
+.headerstyle1 .top-bar{
+	background:#fff;
+	position:relative;
+	border-bottom:1px solid #d3d9e0;
+}
+.headerstyle1 .top-bar-right span {
+    color:#2e384d;
+}
+.headerstyle1 .top-bar-left span {
+    color: #2e384d;
+}
+.headerstyle1 .top-bar .contact i{
+    color:#2e384d !important;
+}
+.headerstyle1 .top-bar .contact i .text-white.ml-1 {
+    color:#2e384d !important;
+}
+.headerstyle1 .top-bar-left .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: #2e384d transparent transparent transparent;
+}
+.headerstyle1  .header-main i {
+    color: #3e4f65 !important;
+}
+.headerstyle1 .header-icons-link .header-icons-link1 i {
+    color: #7c90a0;
+}
+.headerstyle1 .horizontal-main.header-style1.bg-dark-transparent .header-white{
+	display:none;
+}
+
+/*--- Header-Style2 ---*/
+.headerstyle2 .header-search{
+	background:#fff;
+	position:relative;
+}
+.headerstyle2 .header-brand-img{
+	display:none;
+}
+.headerstyle2 .header-white{
+	display:block;
+}
+.headerstyle2 .header-search .header-icons .header-icons-link li a{
+	background: transparent;
+	border:1px solid #d3d9e0;
+}
+.headerstyle2 .top-bar{
+	background:#000;
+	position:relative;
+	border-bottom:1px solid #d3d9e0;
+}
+.headerstyle2 .top-bar-right span {
+    color:#fff;
+}
+.headerstyle2 .top-bar-left span {
+    color: #fff;
+}
+.headerstyle2 .top-bar .contact i{
+    color:#fff !important;
+}
+.headerstyle2 .top-bar .contact i .text-white.ml-1 {
+    color:#fff !important;
+}
+.headerstyle2 .top-bar-left .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: #fff transparent transparent transparent;
+}
+.headerstyle2 .header-main i {
+    color: #fff;
+}
+.headerstyle2 .header-icons-link .header-icons-link1 i {
+    color: #7c90a0;
+}
+.headerstyle2 .horizontal-main.header-style1.bg-dark-transparent .header-white{
+	display:none;
+}
+.headerstyle2 .header-search-logo.header-style-2 .header-brand-img{
+	display:block;
+	float: none;
+    margin: 0 auto;
+}
+.headerstyle1 .header-search-logo.header-style-2 .header-white {
+    display: block;
+    float: none;
+    margin: 0 auto;
+}
+.headerstyle2 .header-search-logo.header-style-2 .header-brand-img.header-white {
+    display: none;
+}
+.headerstyle2 .top-bar-right .header-search-logo .header-brand-img.header-white {
+    display: none;
+}
+.headerstyle2 .top-bar-right .header-search-logo .header-brand-img {
+    display: block;
+}
+
+/*--- Defalut-Horizontal-Menu ---*/
+@media (min-width: 992px){
+	.default-menu .horizontal-main{
+		background: #1a0267;
+	}
+}
+
+/*--- Horizontal-menu Style1 ---*/
+@media (min-width: 992px){
+	.menu-style1 .horizontal-main{
+		background:rgba(0,0,0,0.3);
+	}
+}
+
+
+/*--- Horizontal-menu Style2 ---*/
+@media (min-width: 992px){
+	.menu-style2 .horizontal-main{
+		background:none;
+	}
+	.menu-style2 .horizontalMenu{
+		background: #200454;
+		padding:0 5px;
+		border-radius:3px;
+	}
+	.menu-style2 .horizontal-main.header-style1.bg-dark-transparent .horizontal-mainwrapper{
+		background: #200454;
+	}
+}
